@@ -27,6 +27,13 @@ describe(Triangle) do
     end
   end
 
+  describe ('#isosceles?')do
+    it ("returns false if equilateral") do
+      test_triangle = Triangle.new(3,3,3)
+      expect(test_triangle.isosceles?()).to(eq(false))
+    end
+  end
+
   describe('#scalene?') do
     it ("returns true if any two sides are different") do
       test_triangle = Triangle.new(2,3,4)
