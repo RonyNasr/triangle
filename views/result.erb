@@ -1,22 +1,11 @@
-<% if @triangle.triangle?() and @triangle.equilateral?() %>
-<p>
-  this is an equilateral triangle
-</p>
-
-<% elsif @triangle.triangle?() and @triangle.isosceles?() %>
-<p>
-  this is an isosceles triangle
-</p>
-
-<% elsif @triangle.triangle?() and @triangle.scalene?() %>
-<p>
-  this is a scalene triangle
-</p>
-
+<% if @triangle.triangle?() %>
+  <% if @triangle.equilateral?() %>
+    <p> this is an equilateral triangle </p>
+  <% elsif @triangle.isosceles?() %>
+    <p> this is an isosceles triangle </p>
+  <% elsif @triangle.scalene?() %>
+    <p> this is a scalene triangle </p>
+  <% end %>
 <% else %>
-
-<p>
-  this is not a triangle
-</p>
-
+<p> this is not a triangle </p>
 <% end %>
